@@ -31,7 +31,6 @@ static int test_print (lua_State *L) {
 }
 
 
-//name of this function is not flexible
 int luaopen_mylib (lua_State *L){
     lua_register(L, "test_print", test_print);
     return 0;
