@@ -18,6 +18,8 @@ static int backtrace(lua_State* L)
         printf("%s(%d): %s\n", entry.short_src, entry.currentline, entry.name ? entry.name : "?");
         depth++;
     }
+    
+    return 0;
 }
 
 int luaopen_mylib (lua_State *L){
