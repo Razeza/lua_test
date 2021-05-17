@@ -22,6 +22,6 @@ static int backtrace(lua_State* L)
 }
 
 int luaopen_mylib (lua_State *L){
-    lua_register(L, "backtrace", test_print);
+    lua_register(L, "backtrace", backtrace);
     return 0;
 }
