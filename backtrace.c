@@ -2,7 +2,6 @@
 #include <lualib.h>
 #include <lauxlib.h>
 
-
 #include <stdio.h>
 
 static int backtrace(lua_State* L)
