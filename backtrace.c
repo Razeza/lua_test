@@ -1,4 +1,9 @@
+#include <lua.h>
+#include <lualib.h>
+#include <lauxlib.h>
 
+
+#include <stdio.h>
 
 void lua_stacktrace(lua_State* L)
 {
@@ -10,7 +15,7 @@ void lua_stacktrace(lua_State* L)
         int status = lua_getinfo(L, "Sln", &entry);
         assert(status);
 
-        dprintf("%s(%d): %s\n", entry.short_src, entry.currentline, entry.name ? entry.name : "?");
+        printf("%s(%d): %s\n", entry.short_src, entry.currentline, entry.name ? entry.name : "?");
         depth++;
     }
 }
